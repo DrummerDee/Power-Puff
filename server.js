@@ -53,6 +53,9 @@ app.get('/', (request, response) => {
 app.get('/main.js', (request, response) => {
     response.sendFile(__dirname + '/main.js')
 })
+app.get('/css/style.css', (req,res)=>{
+    res.sendFile(__dirname + '/css/style.css')
+  })
 // this sends back json data
 app.get('/api/:name',(request,response) =>{// : states that char ia a parameter 
     const char = request.params.charName.toLowerCase() //this extracts the name parameter
