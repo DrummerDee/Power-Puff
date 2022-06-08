@@ -5,7 +5,7 @@ const app = express()
 
 //this is used so there is no cross browser issue
 app.use(cors())
-app.use(express.static('public'))
+
 
 //empty array for my data to be stored 
 const char = {
@@ -50,9 +50,9 @@ const char = {
 app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 })
-/*app.get('/main.js', (request, response) => {
+app.get('/main.js', (request, response) => {
     response.sendFile(__dirname + '/main.js')
-})*/
+})
 // this sends back json data
 app.get('/api/:name',(request,response) =>{// : states that char ia a parameter 
     const char = request.params.charName.toLowerCase() //this extracts the name parameter
