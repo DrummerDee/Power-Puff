@@ -45,7 +45,7 @@ const char = {
 
 //how to send information to the user from the html
 app.get('/', (request, response) => {
-    response.sendFile(__dirname + '/index.html')
+    response.sendFile(__dirname + '/main.html')
 })
 // this sends back json data
 app.get('api/:char',(request,response)=>{// : states that char ia a parameter 
