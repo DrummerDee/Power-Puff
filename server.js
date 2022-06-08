@@ -1,11 +1,6 @@
 const express = require("express");
-const cors = require("cors");
 const PORT = 8000;
 const app = express();
-
-//this is used so there is no cross browser issue
-app.use(cors());
-
 //empty array for my data to be stored
 const char = {
   'blossom': {
