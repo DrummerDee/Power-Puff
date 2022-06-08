@@ -5,11 +5,12 @@ const app = express()
 
 //this is used so there is no cross browser issue
 app.use(cors())
+app.use(express.static('public'))
 
 //empty array for my data to be stored 
 const char = {
     "blossom" :{
-    "Name" : "Blossom",
+    "name" : "Blossom",
     "animeName" : "Momoko Akatsumi",
     "accessories":"Red Bow",
     "hairColor" : "Orange",
@@ -19,22 +20,23 @@ const char = {
     "voicedBy" : "Cathy Cavadini"
     },
     "buttercup" :{
-    "Anime Name" : "Kaoru Matsubara",
-    "Accessories":"None",
-    "Hair Color" : "Black",
-    "SuperPowers": "Flight, Super Strength, FireBalls",
-    "Arch Nemesis": "Mojo Jojo, Ruffle ToughEm Boys, Him",
-    "Phrase Said": "",
-    "Voiced By" : "E.G. Daily"
+    "name": "Buttercup",
+    "animeName" : "Kaoru Matsubara",
+    "accessories":"None",
+    "hairColor" : "Black",
+    "superPowers": "Flight, Super Strength, FireBalls",
+    "archNemesis": "Mojo Jojo, Ruffle ToughEm Boys, Him",
+    "phraseSaid": "",
+    "voicedBy" : "E.G. Daily"
     },
     "bubbles":{
-    "Anime Name" : "Miyako Gotokuji",
-    "Accessories":"Purple Octopus",
-    "Hair Color" : "Blonde",
-    "SuperPowers": "Flight, Super Strength, Multilingual",
-    "Arch Nemesis": "Mojo Jojo, Ruffle ToughEm Boys, Him",
-    "Phrase Said": "I'm going to be the prettiest girl at the party",
-    "Voiced By" : "Tara Strong"
+    "animeName" : "Miyako Gotokuji",
+    "accessories":"Purple Octopus",
+    "hairColor" : "Blonde",
+    "superPowers": "Flight, Super Strength, Multilingual",
+    "archNemesis": "Mojo Jojo, Ruffle ToughEm Boys, Him",
+    "phraseSaid": "I'm going to be the prettiest girl at the party",
+    "voicedBy" : "Tara Strong"
     },
     /*"Mojo Jojo: {},
     "Professor" :{},
@@ -44,16 +46,16 @@ const char = {
     
 
 
-//how to send information to the user from the html
+// how to send information to the user from the html
 app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 })
-app.get('/main.js', (request, response) => {
+/*app.get('/main.js', (request, response) => {
     response.sendFile(__dirname + '/main.js')
-})
+})*/
 // this sends back json data
-app.get('/api/:name',(request,response)=>{// : states that char ia a parameter 
-    const charName = request.params.name.toLowerCase() //this extracts the name parameter
+app.get('/api/:name',(request,response) =>{// : states that char ia a parameter 
+    const char = request.params.charName.toLowerCase() //this extracts the name parameter
     console.log(charName);
 
     // write a conditional to check if the paramater(name) is inside of the char object
@@ -65,5 +67,5 @@ app.get('/api/:name',(request,response)=>{// : states that char ia a parameter
 })
 //way for server to be connected 
 app.listen(process.env.PORT || PORT,()=> {
-    console.log(`You're on the ${PORT} babyeee`)
+    console.log(`You're on ${PORT} babyeee`)
 })
