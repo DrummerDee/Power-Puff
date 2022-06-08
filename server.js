@@ -51,7 +51,7 @@ app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 })
 app.get('/main.js', (request, response) => {
-    response.sendFile(__dirname + '/main.js')
+    response.sendFile(__dirname + 'js/main.js')
 })
 app.get('/css/style.css', (req,res)=>{
     res.sendFile(__dirname + '/css/style.css')
