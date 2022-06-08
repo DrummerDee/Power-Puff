@@ -8,16 +8,17 @@ app.use(cors())
 
 //empty array for my data to be stored 
 const char = {
-    "Blossom" :{
-    "Anime Name" : "Momoko Akatsumi",
-    "Accessories":"Red Bow",
-    "Hair Color" : "Orange",
-    "SuperPowers": "Flight, Super Strength, Ice Breath",
-    "Arch Nemesis": "Mojo Jojo, Ruffle ToughEm Boys, Him",
-    "Phrase Said": "I guess we shouldn't judge people by what they look like",
-    "Voiced By" : "Cathy Cavadini"
+    "blossom" :{
+    "Name" : "Blossom",
+    "animeName" : "Momoko Akatsumi",
+    "accessories":"Red Bow",
+    "hairColor" : "Orange",
+    "superPowers": "Flight, Super Strength, Ice Breath",
+    "archNemesis": "Mojo Jojo, Ruffle ToughEm Boys, Him",
+    "phraseSaid": "I guess we shouldn't judge people by what they look like",
+    "voicedBy" : "Cathy Cavadini"
     },
-    "Buttercup" :{
+    "buttercup" :{
     "Anime Name" : "Kaoru Matsubara",
     "Accessories":"None",
     "Hair Color" : "Black",
@@ -26,7 +27,7 @@ const char = {
     "Phrase Said": "",
     "Voiced By" : "E.G. Daily"
     },
-    "Bubbles":{
+    "bubbles":{
     "Anime Name" : "Miyako Gotokuji",
     "Accessories":"Purple Octopus",
     "Hair Color" : "Blonde",
@@ -35,21 +36,25 @@ const char = {
     "Phrase Said": "I'm going to be the prettiest girl at the party",
     "Voiced By" : "Tara Strong"
     },
-    "Mojo Jojo": {},
+    /*"Mojo Jojo: {},
     "Professor" :{},
     "The Mayor":{},
-    "Him":{}
+    "Him":{}*/
 }
     
 
 
 //how to send information to the user from the html
 app.get('/', (request, response) => {
-    response.sendFile(__dirname + '/main.html')
+    response.sendFile(__dirname + '/index.html')
+})
+app.get('/main.js', (request, response) => {
+    response.sendFile(__dirname + '/main.js')
 })
 // this sends back json data
-app.get('api/:char',(request,response)=>{// : states that char ia a parameter 
-    const charName = request.params.charName.toLowerCase() //this extracts the name parameter
+app.get('/char/:name',(request,response)=>{// : states that char ia a parameter 
+    const charName = request.params.name.toLowerCase() //this extracts the name parameter
+    console.log(charName);
 
     // write a conditional to check if the paramater(name) is inside of the char object
     if(char[charName]){
