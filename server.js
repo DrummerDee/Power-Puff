@@ -53,7 +53,7 @@ app.get("/", (request, response) => {
 // app.get('/css/style.css', (req,res)=>{
     res.sendFile(__dirname + '/css/style.css')
   })*/
-app.use(express.static("public"));
+app.use(express.static(__dirname + 'public'));
 // this sends back json data
 app.get("/api/:name", (request, response) => {
   // : states that char ia a parameter
