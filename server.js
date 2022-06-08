@@ -52,7 +52,7 @@ app.get('/main.js', (request, response) => {
     response.sendFile(__dirname + '/main.js')
 })
 // this sends back json data
-app.get('/char/:name',(request,response)=>{// : states that char ia a parameter 
+app.get('/api/:name',(request,response)=>{// : states that char ia a parameter 
     const charName = request.params.name.toLowerCase() //this extracts the name parameter
     console.log(charName);
 
@@ -60,7 +60,7 @@ app.get('/char/:name',(request,response)=>{// : states that char ia a parameter
     if(char[charName]){
         response.json(char[charName])
     }else {
-        response.json(char['message'])
+        response.json(char['unknown'])
     }
 })
 //way for server to be connected 
