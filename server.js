@@ -63,6 +63,4 @@ app.get('/api/:charName', (request, response) => {
 app.listen(process.env.PORT || PORT, () => {
   console.log("You're on ${PORT} babyeee");
 });
-NOTES: 
 
--Make sure to add procfile
