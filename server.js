@@ -1,6 +1,10 @@
 const express = require("express");
+const cors = require('cors')
 const PORT = 8000;
 const app = express();
+
+app.use(cors())
+
 //empty array for my data to be stored
 const char = {
   'blossom': {
@@ -35,24 +39,30 @@ const char = {
   }
 };
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
+app.get('/', (request, response) => {
+    response.sendFile(dirname + '/index.html')
 })
-// app.get('/', (request, response) => {
-//   response.sendFile(__dirname + '/public/js/main.js')
-// })
+
+app.get('/index.js', (request, response)=>{
+  response.sendFile(dirname + '/index.js')
+})
 
 app.get('/api/:charName', (request, response) => {
-    const names = req.params.names.toLowerCase()
-
-
-    if(char[names]){ 
-        res.json(char[charsName])
+    const charsName = request.params.charName.toLowerCase()
+    if(char[charsName]){ 
+        response.json(char[charsName])
     } else {
-       res.json(['unknown'])
+       response.json(['unknown'])
    }
 })
+
+
+
+
 //way for server to be connected
 app.listen(process.env.PORT || PORT, () => {
-  console.log(`You're on ${PORT} babyeee`);
+  console.log("You're on ${PORT} babyeee");
 });
+NOTES: 
+
+-Make sure to add procfile
