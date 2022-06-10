@@ -7,8 +7,6 @@ async function apiRequest(){
         const data = await response.json()
         console.log(data)
         document.querySelector('h2').innerText = data.animeName
-        document.querySelector('li').innerText = data.name
-        document.querySelector('h2').innerText = data.superPowers
     }
     catch(error){
         console.log('Something\'s wrong');
