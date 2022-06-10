@@ -40,11 +40,11 @@ const char = {
 };
 
 app.get('/', (request, response) => {
-    response.sendFile(dirname + '/index.html')
+    response.sendFile(__dirname + '/index.html')
 })
 
 app.get('/index.js', (request, response)=>{
-  response.sendFile(dirname + '/index.js')
+  response.sendFile(__dirname + '/index.js')
 })
 
 app.get('/api/:charName', (request, response) => {
@@ -61,6 +61,6 @@ app.get('/api/:charName', (request, response) => {
 
 //way for server to be connected
 app.listen(process.env.PORT || PORT, () => {
-  console.log("You're on ${PORT} babyeee");
+  console.log(`You're on ${PORT} babyeee`);
 });
 
