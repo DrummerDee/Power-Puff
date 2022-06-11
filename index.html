@@ -4,26 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/public/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet"/>
     <title>Document</title>
   </head>
   <body>
-    <h1>Welcome To TownsVille</h1>
-    <input type="text"/>
-    <button>Search</button>
-    <h2></h2>
-    <div>
-      <ul id="traits">
-        <li><span> Name: </span><span id="charName"></span></li>
-        <li><span> Anime Name: </span><span id="charAnime"></span></li>
-        <li><span>Accessories: </span><span id="charAcces"></span></li>
-        <li><span> Hair Color: </span><span id="charHair"></span></li>
-        <li><span> Super Powers: </span><span id="charSuper"></span></li>
-        <li><span> Arch Nemesis: </span><span id="charNemesis"></span></li>
-        <li><span> Phrase: </span> <span id="charPhrase"></span></li>
-        <li><span> Voice Actor: </span><span id="charVoice"></span></li>
-      </ul>
-    </div>
+    <header>
+      <h1>Welcome To TownsVille</h1>
+    </header>
+    <main>
+      <h1>Search Your Character Of Choice</h1>
+      <input id="input" type="text" />
+      <button id="btn"> Search </button> 
+      <h2></h2>
+      <div class="container">
+        <div class="traits">
+          <ul>
+            <li><span> Name: </span> <span id="charName"></span></li>
+            <li><span> Anime Name:</span> <span id="charAnime"></span></li>
+            <li><span>Accessories: </span> <span id="charAcces"></span></li>
+            <li><span> Hair Color: </span> <span id="charHair"></span></li>
+            <li><span> Super Powers: </span> <span id="charSuper"></span></li>
+            <li><span> Arch Nemesis: </span> <span id="charNemesis"></span></li>
+            <li><span> Phrase: </span> <span id="charPhrase"></span></li>
+            <li><span> Voice Actor: </span><span id="charVoice"></span></li>
+          </ul>
+          <div class="image">
+
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="/public/Js/index.js"></script>
   </body>
 </html>

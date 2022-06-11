@@ -19,4 +19,3 @@ async function apiRequest(){
         console.log('Something\'s wrong');
     }
 }
-
