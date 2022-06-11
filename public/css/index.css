@@ -14,15 +14,28 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 3%;
+  padding: 3% 0 10% 0;
   font-size: 2rem;
 }
     input{
-        font-size: larger;
+        font-size: 1.5em;
+        margin-top: 2%;
+        border-radius: 5%;
+        font-family: "Fascinate", "cursive", sans-serif;
     }
+   
     #btn{
-        font-size:large;
+        font-size:larger;
         margin-top: 0.5%;
+        border-radius: 2em;
+        padding: 1% 1% 1% 1%;
+        background-color: red;
+        font-family: "Fascinate", "cursive", sans-serif;
+        color: white;
+    }
+    #btn:hover{
+        background-color: rgb(245, 195, 203);
+        transition: all 0.3s
     }
 main {
   display: flex;
@@ -35,21 +48,24 @@ main {
 .traits {
   display: flex;
   padding-top: 5%;
+  color: white;
+  font-size:large;
+  display: none;
+  
 }
 .traits li {
   list-style-type: none;
   padding-bottom: 2%;
 }
-
+/* Hide container on the front page */
 .container {
-  border: 2px solid black;
-  box-shadow: 5px 10px #888888;
   border-radius: 10%;
-  background-color: rgba(255, 255, 255, 0.755);
+  background-color: rgba(20, 19, 19, 0.649);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 60%;
+  height: auto;
   margin-top: 2%;
 }
 /*<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/BNb0VikAaRwmUvsEnY" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/love-endless-life-BNb0VikAaRwmUvsEnY">via GIPHY</a></p>

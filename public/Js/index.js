@@ -1,8 +1,8 @@
-document.querySelector('button').addEventListener('click', apiRequest)
+document.querySelector('button').addEventListener('click', apiRequest);
 
 async function apiRequest(){
     const charsName = document.querySelector('input').value
-    try{
+    try {
         const response = await fetch(`https://power-puff.herokuapp.com/api/${charsName}`)
         const data = await response.json()
         console.log(data)
@@ -17,5 +17,7 @@ async function apiRequest(){
     }
     catch(error){
         console.log('Something\'s wrong');
-    }
+    };
+    document.body.style.backgroundImage = "url('/public/images/city.jpeg')";
+    
 }
