@@ -27,7 +27,7 @@ const char = {
     "phraseSaid": "",
     "voicedBy": "E.G. Daily",
   },
-  "bubbles": {
+  'bubbles': {
     "name" : "Bubbles",
     "animeName": "Miyako Gotokuji",
     "accessories": "Purple Octopus",
@@ -38,7 +38,7 @@ const char = {
     "voicedBy": "Tara Strong",
   }
 };
-app.use('/css',express.static(__dirname +'/css'));
+app.use(express.static(__dirname +'/public/'));
 
 app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
