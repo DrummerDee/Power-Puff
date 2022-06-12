@@ -14,12 +14,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3% 0 2% 0;
+  padding: 1% 0 0% 0;
   font-size: 2rem;
 }
     input{
         font-size: 1.5em;
-        margin-top: 2%;
+        margin-top: 1.5%;
         border-radius: 5%;
         font-family: "Fascinate", "cursive", sans-serif;
     }
@@ -43,13 +43,13 @@ main {
   align-items: center;
   flex-direction: column;
   background-image: url ("/images/ppg-heart");
-  padding-top: 2%;
+  padding-top: 1%;
 }
 #traits {
   display: flex;
-  padding-top: 5%;
+  padding-top: 3%;
   color: white;
-  font-size:large;
+  font-size:1.5em;
 
 }
 
@@ -66,6 +66,6 @@ main {
   align-items: center;
   width: 60%;
   height: auto;
-  margin-top: 2%;
+  margin-top: 1%;
  
 }
