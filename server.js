@@ -20,15 +20,15 @@ const char = {
   'buttercup': {
     "name": "Buttercup",
     "animeName": "Kaoru Matsubara",
-    "accessories": "None",
+    "accessories": null,
     "hairColor": "Black",
     "superPowers": "Flight, Super Strength, FireBalls",
     "archNemesis": "Mojo Jojo, Ruffle ToughEm Boys, Him",
     "phraseSaid": "",
     "voicedBy": "E.G. Daily",
   },
-  "bubbles": {
-    "name" : "bubbles",
+  'bubbles': {
+    "name" : "Bubbles",
     "animeName": "Miyako Gotokuji",
     "accessories": "Purple Octopus",
     "hairColor": "Blonde",
@@ -38,13 +38,14 @@ const char = {
     "voicedBy": "Tara Strong",
   }
 };
+app.use(express.static(__dirname +'/public/'));
 
 app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 })
 
-app.get('/index.js', (request, response)=>{
-  response.sendFile(__dirname + '/index.js')
+app.get('/public/JS/index.js', (request, response)=>{
+  response.sendFile(__dirname + '/public/Js/index.js')
 })
 
 app.get('/api/:charName', (request, response) => {
@@ -55,8 +56,6 @@ app.get('/api/:charName', (request, response) => {
        response.json(['unknown'])
    }
 })
-
-
 
 
 //way for server to be connected
