@@ -14,7 +14,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3% 0 10% 0;
+  padding: 3% 0 2% 0;
   font-size: 2rem;
 }
     input{
@@ -45,20 +45,20 @@ main {
   background-image: url ("/images/ppg-heart");
   padding-top: 2%;
 }
-.traits {
+#traits {
   display: flex;
   padding-top: 5%;
   color: white;
   font-size:large;
-  display: none;
-  
+
 }
-.traits li {
+
+#traits li {
   list-style-type: none;
   padding-bottom: 2%;
 }
 /* Hide container on the front page */
-.container {
+#container {
   border-radius: 10%;
   background-color: rgba(20, 19, 19, 0.649);
   display: flex;
@@ -67,5 +67,5 @@ main {
   width: 60%;
   height: auto;
   margin-top: 2%;
+ 
 }
-/*<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/BNb0VikAaRwmUvsEnY" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/love-endless-life-BNb0VikAaRwmUvsEnY">via GIPHY</a></p>
