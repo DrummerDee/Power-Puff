@@ -58,7 +58,6 @@ app.get('/api/:charName', (request, response) => {
 })
 
 
-
 //way for server to be connected
 app.listen(process.env.PORT || PORT, () => {
   console.log(`You're on ${PORT} babyeee`);
