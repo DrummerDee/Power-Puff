@@ -8,7 +8,7 @@ async function apiRequest() {
         const response = await fetch(`https://power-puff.herokuapp.com/api/${charsName}`)
         const data = await response.json()
         console.log(data)
-        //document.getElementById('Container').innerText = "Name :"
+        document.getElementById('Container').innerText = "Name :"
         document.getElementById('name').innerText = "Name:"
         document.getElementById('charName').innerText = data.name
         document.getElementById('AnimeName').innerText = "Anime Name:"
