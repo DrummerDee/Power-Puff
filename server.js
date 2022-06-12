@@ -24,7 +24,7 @@ const char = {
     "hairColor": "Black",
     "superPowers": "Flight, Super Strength, FireBalls",
     "archNemesis": "Mojo Jojo, Ruffle ToughEm Boys, Him",
-    "phraseSaid": "",
+    "phraseSaid": "Yeah, but it's a skill that you cant do. And you cant do",
     "voicedBy": "E.G. Daily",
   },
   'bubbles': {
@@ -38,7 +38,7 @@ const char = {
     "voicedBy": "Tara Strong",
   }
 };
-app.use(express.static(__dirname +'/public/'));
+app.use(express.static(__dirname +'/public/css/index.css'));
 
 app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
