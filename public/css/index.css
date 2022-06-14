@@ -50,7 +50,6 @@ main {
   padding-top: 3%;
   color: white;
   font-size:1.5em;
-
 }
 
 #traits li {
@@ -68,4 +67,127 @@ main {
   height: auto;
   margin-top: 1%;
  
+}
+/* Mobile Responsiveness */
+@media only screen and  (min-width: 320px){
+  body {
+    background-image: url('/public/images/ppg-heart.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    font-family: "Fascinate", "cursive", sans-serif;
+    color: white;
+    max-width: 100%;
+  }
+  header h1{
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 20%;
+  }
+}
+main h1 {
+  text-align: center;
+  font-size: 1rem;
+  padding-right: 5%;
+}
+
+input{
+  font-size: 1em;
+  margin-top: 1.5%;
+  border-radius: 5%;
+  font-family: "Fascinate", "cursive", sans-serif;
+}
+#traits {
+display: flex;
+padding-top: 3%;
+color: white;
+font-size:1em;
+}
+#container {
+border-radius: 5%;
+background-color: rgba(20, 19, 19, 0.649);
+display: flex;
+justify-content: center;
+align-items: center;
+max-width: 100%;
+height: auto;
+margin-top: 1%;
+}
+/* have to figure out how to fix second background image in mobile */
+#btn{
+font-size:1em;
+margin: 1% 5% 0 5%;
+border-radius: 2em;
+padding: 3% 3% 3% 3%;
+background-color: red;
+font-family: "Fascinate", "cursive", sans-serif;
+color: white;
+}
+@media  only screen and (max-width: 600px){
+  body {
+    background-image: url('/public/images/ppg-heart.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    font-family: "Fascinate", "cursive", sans-serif;
+    color: white;
+    max-width: 100%;
+  }
+  header h1{
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 20%;
+  }
+  main h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-right: 5%;
+  }
+
+  input{
+    font-size: 1.75em;
+    margin-top: 1.5%;
+    border-radius: 5%;
+    font-family: "Fascinate", "cursive", sans-serif;
+}
+#traits {
+  display: flex;
+  padding-top: 3%;
+  color: white;
+  font-size:1em;
+}
+#container {
+  border-radius: 10%;
+  background-color: rgba(20, 19, 19, 0.649);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+  margin-top: 1%;
+}
+/* have to figure out how to fix second background image in mobile */
+#btn{
+  font-size:2em;
+  margin: 1% 5% 0 5%;
+  border-radius: 2em;
+  padding: 3% 3% 3% 3%;
+  background-color: red;
+  font-family: "Fascinate", "cursive", sans-serif;
+  color: white;
+}
+}
+@media only screen and (max-width: 800px) {
+  body {
+    background-image: url('/public/images/ppg-heart.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    font-family: "Fascinate", "cursive", sans-serif;
+    color: white;
+    max-width: 100%;
+  }
 }
