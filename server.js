@@ -15,17 +15,17 @@ const char = {
     "superPowers": "Flight, Super Strength, Ice Breath",
     "archNemesis": "Mojo Jojo, Ruffle ToughEm Boys, Him",
     "phraseSaid": "I guess we shouldn't judge people by what they look like",
-    "voicedBy": "Cathy Cavadini",
+    "voicedBy": "Cathy Cavadini"
   },
   'buttercup': {
     "name": "Buttercup",
     "animeName": "Kaoru Matsubara",
-    "accessories": null,
+    "accessories": "none",
     "hairColor": "Black",
     "superPowers": "Flight, Super Strength, FireBalls",
     "archNemesis": "Mojo Jojo, Ruffle ToughEm Boys, Him",
     "phraseSaid": "Yeah, but it's a skill that you cant do. And you cant do",
-    "voicedBy": "E.G. Daily",
+    "voicedBy": "E.G. Daily"
   },
   'bubbles': {
     "name" : "Bubbles",
@@ -35,10 +35,10 @@ const char = {
     "superPowers": "Flight, Super Strength, Multilingual",
     "archNemesis": "Mojo Jojo, Ruffle ToughEm Boys, Him",
     "phraseSaid": "I'm going to be the prettiest girl at the party",
-    "voicedBy": "Tara Strong",
+    "voicedBy": "Tara Strong"
   }
 };
-app.use(express.static(__dirname +'/public/css/index.css'));
+app.use(express.static(__dirname +'public'));
 
 app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')

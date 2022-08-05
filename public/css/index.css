@@ -124,7 +124,7 @@ background-color: red;
 font-family: "Fascinate", "cursive", sans-serif;
 color: white;
 }
-@media  only screen and (max-width: 600px){
+@media  only screen and (max-width: 480px){
   body {
     background-image: url('/public/images/ppg-heart.gif');
     background-repeat: no-repeat;
@@ -137,12 +137,12 @@ color: white;
   }
   header h1{
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 5rem;
     padding-top: 20%;
   }
   main h1 {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding-right: 5%;
   }
 
@@ -164,7 +164,7 @@ color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
+  width: 90%;
   height: auto;
   margin-top: 1%;
 }
@@ -179,7 +179,7 @@ color: white;
   color: white;
 }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   body {
     background-image: url('/public/images/ppg-heart.gif');
     background-repeat: no-repeat;
@@ -188,6 +188,65 @@ color: white;
     background-position: center center;
     font-family: "Fascinate", "cursive", sans-serif;
     color: white;
-    max-width: 100%;
+    width: 100%;
+  } 
+  header h1{
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 20%;
+  }
+  main h1 {
+    text-align: center;
+    font-size: 2rem;
+    padding-right: 5%;
+  }
+  input{
+    font-size: 1em;
+    margin-top: 1.5%;
+    border-radius: 5%;
+    font-family: "Fascinate", "cursive", sans-serif;
+}
+#btn{
+  font-size:1rem;
+  margin: 1% 5% 0 5%;
+  border-radius: 2em;
+  padding: 1% 1% 1% 1%;
+  background-color: red;
+  font-family: "Fascinate", "cursive", sans-serif;
+  color: white;
+}
+#traits {
+  text-align: center;
+  padding-top: 3%;
+  color: white;
+  font-size:2em;
+}
+#container {
+  border-radius: 10%;
+  background-color: rgba(20, 19, 19, 0.649);
+  width: 90%;
+  height: auto;
+  margin-top: 1%;
+}
+  @media  only screen and (max-width: 1200px){
+    header h1{
+      text-align: center;
+      font-size: 1.5rem;
+      padding-top: 20%;
+    }
+    main h1 {
+      text-align: center;
+      font-size: 2rem;
+      padding-right: 5%;
+    }
+    #btn{
+      font-size:1rem;
+      margin: 1% 5% 0 5%;
+      border-radius: 2em;
+      padding: 1% 1% 1% 1%;
+      background-color: red;
+      font-family: "Fascinate", "cursive", sans-serif;
+      color: white;
+    }
   }
 }
