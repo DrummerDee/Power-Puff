@@ -1,5 +1,17 @@
-
+let container = document.querySelector('container')
+let button = document.getElementById('button')
 document.querySelector('button').addEventListener('click', apiRequest);
+// ability to submit with enter for preference/ web accessability
+let input = document.getElementById('input')
+input.addEventListener('keypress', (e)=> {
+    if(e.key == 'Enter'){
+        e.preventDefault()
+        document.getElementById('button').click()
+    }
+})
+
+
+
 
 
 async function apiRequest() {
@@ -8,13 +20,9 @@ async function apiRequest() {
         const response = await fetch(`https://power-puff.herokuapp.com/api/${charsName}`)
         const data = await response.json()
         console.log(data)
-        //document.getElementById('Container').innerText = "Name :"
-        document.getElementById('name').innerText = "Name:"
-        document.getElementById('charName').innerText = data.name
-        document.getElementById('AnimeName').innerText = "Anime Name:"
-        document.getElementById('charAnime').innerText = data.animeName
-        document.getElementById('Accessories').innerText = "Accesories:"
-        document.getElementById('charAcces').innerText = data.accesories
+        document.getElementById('charName').innerText = `Name : ${data.name}`
+        document.getElementById('charAnime').innerText = `Anime Name: ${data.animeName}`
+        document.getElementById('charAcces').innerText = `Accessories: ${data.accessories}`
         document.getElementById('HairColor').innerText = "Hair Color:"
         document.getElementById('charHair').innerText = data.hairColor
         document.getElementById('SuperPowers').innerText = "Super Powers:"
@@ -27,15 +35,7 @@ async function apiRequest() {
         document.getElementById('charVoice').innerText = data.voicedBy
     }
     catch (error) {
-        console.log('Something\'s wrong');
+        console.log(error);
     };
-    document.body.style.backgroundImage = "url('/public/images/city.jpeg')";
-
-    document.getElementById('btn').style.color = "white"
-    document.getElementById('btn').style.backgroundColor = "blue"
-    
-
-    
-
 }
 

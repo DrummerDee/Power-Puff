@@ -4,6 +4,11 @@ const PORT = 8000;
 const app = express();
 
 app.use(cors())
+app.use(express.static(__dirname +'/public'));
+
+app.get('/', (request, response) => {
+    response.sendFile(__dirname + '/index.html')
+})
 
 //empty array for my data to be stored
 const char = {
@@ -20,7 +25,7 @@ const char = {
   'buttercup': {
     "name": "Buttercup",
     "animeName": "Kaoru Matsubara",
-    "accessories": "none",
+    "accessories": "She has none",
     "hairColor": "Black",
     "superPowers": "Flight, Super Strength, FireBalls",
     "archNemesis": "Mojo Jojo, Ruffle ToughEm Boys, Him",
@@ -38,19 +43,13 @@ const char = {
     "voicedBy": "Tara Strong"
   }
 };
-app.use(express.static(__dirname +'public'));
 
-app.get('/', (request, response) => {
-    response.sendFile(__dirname + '/index.html')
-})
 
-app.get('/public/JS/index.js', (request, response)=>{
-  response.sendFile(__dirname + '/public/Js/index.js')
-})
 
 app.get('/api/:charName', (request, response) => {
     const charsName = request.params.charName.toLowerCase()
     if(char[charsName]){ 
+      console.log(char[charsName])
         response.json(char[charsName])
     } else {
        response.json(['unknown'])
