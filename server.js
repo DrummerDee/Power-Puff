@@ -1,5 +1,6 @@
 const express = require("express");
-const cors = require('cors')
+const cors = require('cors');
+const { response } = require("express");
 const PORT = 8000;
 const app = express();
 
@@ -10,9 +11,9 @@ app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 })
 
-//empty array for my data to be stored
+
 const char = {
-  'blossom': {
+  blossom: {
     "name": "Blossom",
     "animeName": "Momoko Akatsumi",
     "accessories": "Red Bow",
@@ -22,7 +23,7 @@ const char = {
     "phraseSaid": "I guess we shouldn't judge people by what they look like",
     "voicedBy": "Cathy Cavadini"
   },
-  'buttercup': {
+  buttercup: {
     "name": "Buttercup",
     "animeName": "Kaoru Matsubara",
     "accessories": "She has none",
@@ -32,7 +33,7 @@ const char = {
     "phraseSaid": "Yeah, but it's a skill that you cant do. And you cant do",
     "voicedBy": "E.G. Daily"
   },
-  'bubbles': {
+  bubbles: {
     "name" : "Bubbles",
     "animeName": "Miyako Gotokuji",
     "accessories": "Purple Octopus",
@@ -44,7 +45,13 @@ const char = {
   }
 };
 
+app.get('/api/helloworld', (request,response) => {
+    return response.json({message: "hello world"})
+});
 
+app.get('/api/powerpuffchars', (request,response) => {
+    return response.json({char: JSON.stringify(char)})
+});
 
 app.get('/api/:charName', (request, response) => {
     const charsName = request.params.charName.toLowerCase()
