@@ -1,14 +1,15 @@
 //IIFE - self evaluating function
 // https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 (() => {
-// local variables
-    let container = document.querySelector('container')
-    let button = document.getElementById('button')
-    let input = document.getElementById('input')
+    // local variables
+    let button = document.getElementById('button');
+    let searchQuery = document.getElementById('input');
+    console.log('INITIALIZE APP: ', searchQuery.value, ' this will be null');
 
-// Event listeners
-    document.querySelector('button').addEventListener('click', apiRequest());
-// ability to submit with enter for preference/ web accessibility
+    // Event listeners
+    button.addEventListener('click', apiRequest);
+
+    // ability to submit with enter for preference/ web accessibility
     input.addEventListener('keypress', (e)=> {
         if(e.key == 'Enter'){
             e.preventDefault()
@@ -17,20 +18,39 @@
     });
 
 
-// Functions
-    async function apiRequest() {
-        const inputValue = document.querySelector('input').value;
+    // Functions
+   function apiRequest() {
+        let searchQueryValue = searchQuery.value;
+        // if (!inputValue.length) {
+        //     alert('PLEASE INPUT VALUE');
+        // }
 
-        try {
-            const response = await fetch(`https://power-puff.herokuapp.com/api/${inputValue}`);
-            const responseToJson = response.json();
-            updateDOMList(responseToJson);
-            console.log('Expect data to be in a json format: ', responseToJson);
-
-        } catch (err) {
-            console.err('API Request failure: ', err)
+       if (searchQueryValue.length) { // either 0 or greater; if 0 = false if +1 true
+            console.log('API Request');
+            return fetch(`https://power-puff.herokuapp.com/api/${searchQueryValue}`)
+                .then(resp => resp.json())
+                .then(data => updateDOMList(data))
+                .catch(err => {
+                    console.error('ERROR: ', err);
+                });
         }
 
+       // try {
+       //      responseToJson = response.json();
+       //
+       //      if (!response) {
+       //          console.error('No data to show');
+       //      }
+       //
+       //      if (response) {
+       //          console.log('Expect data to be in a json format: ', responseToJson);
+       //          updateDOMList(responseToJson);
+       //      }
+       //  } catch (err) {
+       //      console.err('API Request failure: ', err)
+       //  }
+
+        //return responseToJson;
     };
 
     function updateDOMList(data) {
