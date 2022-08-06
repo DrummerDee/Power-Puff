@@ -44,11 +44,6 @@ const char = {
     "voicedBy": "Tara Strong"
   }
 };
-
-app.get('/api/helloworld', (request,response) => {
-    return response.json({message: "hello world"})
-});
-
 app.get('/api/powerpuffchars', (request,response) => {
     return response.json({char: JSON.stringify(char)})
 });
