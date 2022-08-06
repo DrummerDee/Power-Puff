@@ -1,6 +1,6 @@
 let container = document.querySelector('container')
 let button = document.getElementById('button')
-document.querySelector('button').addEventListener('click', apiRequest);
+document.querySelector('button').addEventListener('click', apiRequest());
 // ability to submit with enter for preference/ web accessability
 let input = document.getElementById('input')
 input.addEventListener('keypress', (e)=> {
@@ -15,15 +15,16 @@ input.addEventListener('keypress', (e)=> {
 
 
 async function apiRequest() {
+    console.log('request');
     const charsName = document.querySelector('input').value
     try {
         const response = await fetch(`https://power-puff.herokuapp.com/api/${charsName}`)
         const data = await response.json()
         console.log(data)
-function doc(param){
-   return document.getElementById(param).innertext
-}
-doc('charName') = `Name: ${data.name}`
+// function doc(param){
+//    return document.getElementById(param).innertext
+// }
+// doc('charName') = `Name: ${data.name}`
 
         document.getElementById('charName').innerText = `Name : ${data.name}` //grabs name from obj and inserts it into DOM
         document.getElementById('charAnime').innerText = `Anime Name: ${data.animeName}`
