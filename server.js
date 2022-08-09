@@ -1,27 +1,27 @@
-const express = require("express");
-const cors = require('cors')
+// bring in all necessary dependecies 
+const express = require("express");// middleware
+const cors = require('cors'); // middleware - protection across sites 
+// port my server will be working on 
 const PORT = 8000;
 const app = express();
 
 app.use(cors())
-app.use(express.static(__dirname +'/public'));
 
-app.get('/', (request, response) => {
-    response.sendFile(__dirname + '/index.html')
+// serves up html page 
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html')
 })
 
 //empty array for my data to be stored
-// const char = {
-//   'blossom': {
-//     "name": "Blossom",
-//     "animeName": "Momoko Akatsumi",
-//     "accessories": "Red Bow",
-//     "hairColor": "Orange",
-//     "superPowers": "Flight, Super Strength, Ice Breath",
-//     "archNemesis": "Mojo Jojo, Ruffle ToughEm Boys, Him",
-//     "phraseSaid": "I guess we shouldn't judge people by what they look like",
-//     "voicedBy": "Cathy Cavadini"
-//   },
+//'blossom': {
+  //     "name": "Blossom",
+  //     "animeName": "Momoko Akatsumi",
+  //     "accessories": "Red Bow",
+  //     "hairColor": "Orange",
+  //     "superPowers": "Flight, Super Strength, Ice Breath",
+  //     "archNemesis": "Mojo Jojo, Ruffle ToughEm Boys, Him",
+  //     "phraseSaid": "I guess we shouldn't judge people by what they look like",
+  //     "voicedBy": "Cathy Cavadini"
 //   'buttercup': {
 //     "name": "Buttercup",
 //     "animeName": "Kaoru Matsubara",
@@ -44,20 +44,9 @@ app.get('/', (request, response) => {
 //   }
 // };
 
-
-
-// app.get('/api/:charName', (request, response) => {
-//     const charsName = request.params.charName.toLowerCase()
-//     if(char[charsName]){ 
-//       console.log(char[charsName])
-//         response.json(char[charsName])
-//     } else {
-//        response.json(['unknown'])
-//    }
-// })
-
+// class constuctor to input data more efficiently 
 class Char {
-  constructor(name,animeName,accessories,hairColor,superPowers,archNemesis,phraseSaid,voicedBy){
+  constructor (name,animeName,accessories,hairColor,superPowers,archNemesis,phraseSaid,voicedBy){
   this.name = name;
   this.animeName = animeName;
   this.accessories = accessories;
@@ -68,12 +57,25 @@ class Char {
   this.voicedBy = voicedBy;
 }
 }
-let Bubbles = new Char('Bubbles','octupus','she has none')
-app.get('/api/powerpuffchars', (request,response) => {
-    return response.json({char: JSON.stringify(char)})
-});
-//way for server to be connected
-app.listen(process.env.PORT || PORT, () => {
+// initializing new instances of each character
+const buttercup = new Char('Buttercup','Kaoru Matsubara','She has none','Black','Flight,Super Strength,FireBalls','Mojo Jojo, Ruffle ToughEm Boys, Him',`Yeah, but it's a skill that you can't do`),
+      bubbles = new Char('Bubbles', 'Stuffed Octopus'),
+      // storing new objects in chars object
+      chars = {buttercup,bubbles}
+
+// will return whatever name is put after the api/
+app.get('/api/:name', (req,res) => {
+// put the param targeting the name attribute in a variable and making it case insensitive
+  const charName = req.params.name.toLowerCase()
+  if(chars[charName]){ 
+    console.log(chars[charName])
+        res.json(chars[charName])
+    } else {
+        res.json('unknown to this universe')
+       }
+})
+//tells me that the port has successfully connected
+app.listen(PORT, () => {
   console.log(`You're on ${PORT} babyeee`);
 });
 
