@@ -75,7 +75,6 @@ app.get('/api/:name', (req,res) => {
        }
 })
 //tells me that the port has successfully connected
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`You're on ${PORT} babyeee`);
 });
-
