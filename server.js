@@ -5,12 +5,12 @@ const cors = require('cors'); // middleware - protection across sites
 const PORT = 8000;
 const app = express();
 
-app.use(cors())
+app.use(cors());
 
 // serves up html page 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
-})
+});
 
 //empty array for my data to be stored
 //'blossom': {
@@ -73,7 +73,10 @@ app.get('/api/:name', (req,res) => {
     } else {
         res.json('unknown to this universe')
        }
-})
+});
+app.get('/characters', (req,res) => {
+  res.json(chars)
+});
 //tells me that the port has successfully connected
 app.listen(process.env.PORT || PORT, () => {
   console.log(`You're on ${PORT} babyeee`);
