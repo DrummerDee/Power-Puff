@@ -56,7 +56,22 @@ app.get('/', (request, response) => {
 //    }
 // })
 
-
+class Char {
+  constructor(name,animeName,accessories,hairColor,superPowers,archNemesis,phraseSaid,voicedBy){
+  this.name = name;
+  this.animeName = animeName;
+  this.accessories = accessories;
+  this.hairColor = hairColor;
+  this.superPowers = superPowers;
+  this.archNemesis = archNemesis;
+  this.phraseSaid = phraseSaid;
+  this.voicedBy = voicedBy;
+}
+}
+let Bubbles = new Char('Bubbles','octupus','she has none')
+app.get('/api/powerpuffchars', (request,response) => {
+    return response.json({char: JSON.stringify(char)})
+});
 //way for server to be connected
 app.listen(process.env.PORT || PORT, () => {
   console.log(`You're on ${PORT} babyeee`);
