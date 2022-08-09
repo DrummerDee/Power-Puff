@@ -58,10 +58,11 @@ class Char {
 }
 }
 // initializing new instances of each character
-const buttercup = new Char('Buttercup','Kaoru Matsubara','She has none','Black','Flight,Super Strength,FireBalls','Mojo Jojo, Ruffle ToughEm Boys, Him',`Yeah, but it's a skill that you can't do`),
-      bubbles = new Char('Bubbles', 'Stuffed Octopus'),
+const buttercup = new Char('Buttercup','Kaoru Matsubara','She has none','Black','Flight,Super Strength,FireBalls','Mojo Jojo, Ruffle ToughEm Boys, Him',`Yeah, but it's a skill that you can't do`,'E.G Daily'),
+      bubbles = new Char('Bubbles','Miyako Gotokuji','Purple Octopus','Blonde','Flight,Super Strength,Multilingual','Mojo Jojo,Ruffle ToughEm Boys,Him',`I'm going to be the prettiest girl at the party`,'Tara Strong'),
+      blossom = new Char('Blossom','Momoko Akatsumi','Red Bow','Orange','Flight,Super Strength, Ice Breath',`I guess we shouldn't judge people by what they look like`,'Cathy Cavadini'),
       // storing new objects in chars object
-      chars = {buttercup,bubbles}
+      chars = {buttercup,bubbles,blossom}
 
 // will return whatever name is put after the api/
 app.get('/api/:name', (req,res) => {
@@ -74,6 +75,7 @@ app.get('/api/:name', (req,res) => {
         res.json('unknown to this universe')
        }
 });
+// to retrieve general api data 
 app.get('/characters', (req,res) => {
   res.json(chars)
 });
