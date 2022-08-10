@@ -40,8 +40,10 @@
 
 ## Prerequisites 
 <h3> Install node.js</h3>
-Steps to install [node](https://nodejs.org/en/) 
--
+
+[Steps to install node](https://nodejs.org/en/) 
+
+
 
 ## To install locally 
 Git clone this repo to your local machine, npm install, then run node server.js or npm run start :)
