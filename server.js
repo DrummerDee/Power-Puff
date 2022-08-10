@@ -11,7 +11,9 @@ app.use(cors());
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 });
+// grabs css file 
 
+app.express(static )
 // class constuctor to input data more efficiently 
 class Char {
   constructor(name, accessories, hairColor, superPowers, archNemesis, phraseSaid, voicedBy) {
@@ -28,19 +30,17 @@ class Char {
 const buttercup = new Char('Buttercup', 'She has none', 'Black', 'Flight,Super Strength,FireBalls', 'Mojo Jojo, Ruffle ToughEm Boys, Him', `Yeah, but it's a skill that you can't do`, 'E.G Daily'),
   bubbles = new Char('Bubbles', 'Purple Octopus', 'Blonde', 'Flight,Super Strength,Multilingual', 'Mojo Jojo,Ruffle ToughEm Boys,Him', `I'm going to be the prettiest girl at the party`, 'Tara Strong'),
   blossom = new Char('Blossom', 'Red Bow', 'Orange', 'Flight,Super Strength, Ice Breath', `I guess we shouldn't judge people by what they look like`, 'Cathy Cavadini'),
-  professor = new Char('Professor Utonium', 'Black Pipe', 'Black', 'None', 'Girls!', 'Mojo Jojo', 'Tom Kane'),
-  mayor = new Char('Mayor/Barney', 'Monocole & Small top hat', 'None', 'None', '', 'He has none technically', 'Tom Kenny, Jim Cunnings'),
-  msbellum = new Char('Miss Sara Bellum', 'The mayor', 'Red'),
-  mskeane = new Char('Miss Keane'),
-  narrator = new Char('Narrator'),
-  talkingdog = new Char('Talking Dog'),
-  mitchmitchelson = new Char('Mitch Mitchelson'),
-  thederbytantes = new Char('The Derbytantes'),
-  donny = new Char('Donny'),
-  mojojojo = new Char('Mojo Jojo'),
-  him = new Char('HIM'),
-  fuzzylumpkins = new Char('Fuzzy Lumpkins'),
-  princessmorbucks = new Char('Princess Morbucks'),
+  professor = new Char('Professor Utonium', 'Black Pipe', 'Black', 'None', 'Mojo Jojo', 'Girls!','Tom Kane'),
+  mayor = new Char('Mayor/Barney', 'Monocole & Small top hat', 'N/A', 'None','He has none technically', 'Hello this is the mayor','Tom Kenny, Jim Cunnings'),
+  msbellum = new Char('Miss Sara Bellum', 'The mayor', 'Red','None','None',`I knew you'd do just fine`,'Jennifer Martin'),
+  mskeane = new Char('Miss Keane','None', 'Black','None','None','No fighting','Jennifer Hale & Kath Soucie'),
+  narrator = new Char('Narrator','None','None','None','None','None','Thanks to the PowerPuff Girls','Tom Kenny'),
+  talkingdog = new Char('Talking Dog','Red collors and yellow tag','White and black spots','Ability to speak','Everyone to be fair',`You sure don't throw like a girl`,'Tom Kenny and Paul Mercier'),
+  mitchmitchelson = new Char('Mitch Mitchelson','None','Brown','None','Everyone but buttercup','In yo face, baby','Tom Kenny'),
+  mojojojo = new Char('Mojo Jojo','purple cape, white boots, tall helmet','Black','Super Intelligence','Professor and the PowerPuff Girls','I am Mojo Jojo!','Roger L. Jackson'),
+  him = new Char('HIM','Red jacket,skirt and black heels','Black?','Supernatural and Demon abilities','the PowerPuff Girls',`Oh, I'm sorry! But nobody does evil THE WAY I DO`,'Tom Kane'),
+  fuzzylumpkins = new Char('Fuzzy Lumpkins','Banjo and brown boots','Pink','Lumpkins Creature','Anyone who steps on his property',`I'm Fuzzy Lumpkins. I live here. This is my territory... Don't enter without permission!`,'Jim Cummings'),
+  princessmorbucks = new Char('Princess Morbucks','yellow Powerpuff-style dress,black gloves and boots, and a tiara','Had powers similar to PPG at one point','The PowerPuff Girls',`"Why, you - you can't do this to me! I'm the Princess! Do you know who my daddy is?`,'Jennifer Hale',),
   ace = new Char('Ace - Ganggreen Member'),
   snake = new Char('Snake - Ganggreen Member'),
   lilarturo = new Char('Lil Arturo'),
