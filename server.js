@@ -11,9 +11,7 @@ app.use(cors());
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 });
-// grabs css file 
 
-// app.express(static )
 // class constuctor to input data more efficiently 
 class Char {
   constructor(name, accessories, hairColor, superPowers, archNemesis, phraseSaid, voicedBy) {
@@ -71,8 +69,6 @@ const buttercup = new Char('Buttercup', 'She has none', 'Black', 'Flight,Super S
     narrator,
     talkingdog,
     mitchmitchelson,
-    thederbytantes,
-    donny,
     mojojojo,
     him,
     fuzzylumpkins,
@@ -101,7 +97,6 @@ app.get('/api/:name', (req, res) => {
   // put the param targeting the name attribute in a variable and making it case insensitive
   const charName = req.params.name.toLowerCase()
   if (chars[charName]) {
-    console.log(chars[charName])
     res.json(chars[charName])
   } else {
     res.json('unknown to this universe')
