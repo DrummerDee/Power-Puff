@@ -28,7 +28,7 @@
 
 
 ## What was learned 
-With this application, I learned to create a REST API on the server using Cors and Express. Additoinallearned to organize my code with a class constructor, which reduced the time inputting new character data. More importantly, this application pushed me to practice routing using tools like [Postman](https://www.postman.com/). I also integrated a request method to render my static files. Lastly, I remembered how much fun it was growing up watching Powerpuff girls as a child. 
+With this application, I learned to create a REST API on the server using Cors and Express. Additionally I learned to organize my code with a class constructor; which reduced time inputting new character data. More importantly, this application pushed me to practice using tools like [Postman](https://www.postman.com/) to ensure proper routing. I also integrated a request method to render my static files. Lastly, I remembered how much fun it was growing up watching Powerpuff girls as a child. 
 
 ## Built With 
 * Node.js
