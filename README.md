@@ -26,8 +26,6 @@
 ## Built With 
 * Node.js
 * Express
-* Cors
-* OOP
 * Html
 * CSS
 * Javascript
