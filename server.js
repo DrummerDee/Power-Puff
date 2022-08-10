@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 });
 // grabs css file 
 
-app.express(static )
+// app.express(static )
 // class constuctor to input data more efficiently 
 class Char {
   constructor(name, accessories, hairColor, superPowers, archNemesis, phraseSaid, voicedBy) {
