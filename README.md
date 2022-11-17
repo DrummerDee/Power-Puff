@@ -39,7 +39,7 @@ With this application, I learned to create a REST API on the server using Cors a
 * Javascript
 
 
-### Optimizations
+## Optimizations
 * Add a database so users are able to create a personal account, where they are then able to upload images, audio and thier own data pertaining to Powerpuff Girls
 * Using browser developer tools that help to debug browser compatability tests
 
